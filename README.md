@@ -57,7 +57,7 @@ This document is a fusion of the static **Natural Numbers Matrix** and the dynam
 
 ## 🏗️ 1. Matrix Structure and Successive Inheritance (Static Layer)
 
-The number line is divided into layers according to Primorial ($p_n\#$) levels. Each new Level "inherits" all vertical columns and gaps from the previous Level.
+The number line is divided into layers according to Primorial ($p_n$#) levels. Each new Level "inherits" all vertical columns and gaps from the previous Level.
 
 | Level | Factors ($p_n$) | Matrix Width ($M_L$) | Architectural State |
 | :--- | :--- | :--- | :--- |
