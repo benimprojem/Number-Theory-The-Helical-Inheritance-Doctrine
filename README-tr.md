@@ -32,6 +32,7 @@
 * Örnek: 7 katlarının toplam matrisi, 11 matrisi kurulduğunda 11'in katlarının bulunacağı tüm kolonların sayısıdır.
 * Matris eleme yapılmadan tüm çarpanları ile kurulursa hizalama aynı şekilde gerçekleşir ve öncekiler de karışık olarak birleşik dikey hizalarını oluştururlar. 
 * Eleme (önceki bileşiklerin) yapılmadığında dahi bu dikey düzenin korunması, kuralın kendisinden önceki bileşiklerin elenmesinden bağımsız, sayı doğrusunun kendi "katlanma noktaları" ile ilgili olduğunu kanıtlar.
+* Ayrıca hizalanma şekilleri : 1-1 , 1-2, 2-1 şeklindedir. örnek ilk sıra herzaman hedefin bileişiğidir ilk sıra modla taranır. ilk bulunan hedef bileşiği, ile ikinci bulanması gerekna arasındaki kaç sayı olduğuna bağlıdır. 1-1 ise arada 10 sayı varsa 3. kolon +10 ileride dir. bulmazsa +10 daha gider bukez oran 1-2 olmuş olur. Patern bu şekilde devam eder. 
 * Örnek : 5,7,11,13 leri eleyip tekrar 17ler için matris kurulduğunda aynı şekilde bir Kolon olarak hizalanırlar. Sadece iki Kolon arasında boşluk elemeden dolayı sürekli azalır ve Alsallar diğer sütunlarda artmaya ve hizalanmaya başlarlar.
 * Sonuç: Bir n sayısının $\sqrt{n}$ Tüm Çarpanlar Matrisi kurulabilirse o ve ondan öncekiler tamamen hizlanır. Bu aynı zzmanda asalların matrisi olur.
 
