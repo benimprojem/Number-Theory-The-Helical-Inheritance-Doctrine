@@ -61,7 +61,7 @@ Bu doküman, statik **Doğal Sayılar Matrisi** ile dinamik **Ters Konik Helezon
 
 ## 🏗️ 1. Matrisel Yapı ve Ardışık Miras (Statik Katman)
 
-Sayı doğrusu, Primorial ($p_n \# $) seviyelerine göre katmanlara ayrılır. Her yeni Level, bir önceki Level'ın tüm dikey kolonlarını ve boşluklarını "miras" alır.
+Sayı doğrusu, Primorial $p_n $\#  seviyelerine göre katmanlara ayrılır. Her yeni Level, bir önceki Level'ın tüm dikey kolonlarını ve boşluklarını "miras" alır.
 
 | Level | Çarpanlar ($p_n$) | Matris Genişliği ($M_L$) | Mimari Durum |
 | :--- | :--- | :--- | :--- |
