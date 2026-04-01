@@ -121,14 +121,14 @@ Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa
 
 ## 2️⃣ Kolon Matrisi ve Primorial
 
-* Primorial (P_n# = 2 \cdot 3 \cdot 5 \cdots p_n)
-* Tüm küçük asal kolonlar kurulur ((p \le \sqrt{N}))
-* İlk satır: ([1, 2, …, P_n#])
+* Primorial $$(P_n# = 2 \cdot 3 \cdot 5 \cdots p_n)$$
+* Tüm küçük asal kolonlar kurulur $$((p \le \sqrt{N}))$$
+* İlk satır:$$([1, 2, …, P_n#])$$
 * İlk satır taramasıyla **tüm bileşik kolonlar** tespit edilebilir:
 
-[
+$$[
 \text{Occupied}(k) = \bigvee_{q \le p_n} (k \bmod q = 0)
-]
+]$$
 
 * Boş kolonlar = potansiyel asallar
 
@@ -139,14 +139,14 @@ Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa
 ## 3️⃣ p→p+1 Mantığı (Deterministik)
 
 1. Bilinen asal (p) seçilir.
-2. Potansiyel asallar aralığı oluşturulur: ([p+1, …, p+G])
-3. Küçük asal kolonlar kurulur ((q \le \sqrt{p+G}))
-4. İlk boş kolon → sonraki asal (p_{n+1})
+2. Potansiyel asallar aralığı oluşturulur: $$([p+1, …, p+G])$$
+3. Küçük asal kolonlar kurulur $$((q \le \sqrt{p+G}))$$
+4. İlk boş kolon → sonraki asal $$(p_{n+1})$$
 5. Paternler: 1-1, 1-2, 2-1 şeklinde tekrar eder
 
-[
+$$[
 p_{n+1} = \min { n \in [p+1, …, p+G] \mid n \bmod q \neq 0, \forall q \le \sqrt{p+G} }
-]
+]$$
 
 ---
 
@@ -195,22 +195,22 @@ Küçük asal kolonlar: 2,3,5,7,11
 * Deterministik ve geometrik → tüm bileşikler eleme ile tespit edilir.
 * İlk çarpanda durma → büyük sayılar için hız kazanımı.
 * Patern tabanlı → ardışık asalların gap’ları tahmin edilebilir.
-* Küçük asal kolon sayısı = (\sqrt{N}) → bellek ve işlem sınırlı.
+* Küçük asal kolon sayısı = $$(\sqrt{N})$$ → bellek ve işlem sınırlı.
 
 ---
 
 ## 7️⃣ Özet Formül
 
-1. **Kolon kurulumu:** tüm (q \le \sqrt{N}) küçük asal kolonlar
+1. **Kolon kurulumu:** tüm $$(q \le \sqrt{N})$$ küçük asal kolonlar
 2. **Eleme:** ilk satır veya heliks üzerinden her sayı test edilir
 3. **İlk boş kolon:** sonraki asal
 4. **Gap ve patern:** kolon boşlukları üzerinden tahmin edilir
 
-[
+$$[
 \boxed{
 p_{n+1} = \min { n > p_n \mid n \bmod q \neq 0, \forall q \le \sqrt{p_{n+1}} }
 }
-]
+]$$
 
 > Bu formül hem teorik hem algoritmik olarak kolon tabanlı heliks sistemi ile p→p+1 bulmayı garanti eder.
 
