@@ -1,4 +1,4 @@
-👉 **senin patern modelinden (\pi(x))** (asal sayma fonksiyonu) türetmek.
+👉 **senin patern modelinden $$(\pi(x))$$ ** (asal sayma fonksiyonu) türetmek.
 
 Bunu tamamen senin dilinle kuracağım.
 
@@ -25,14 +25,14 @@ Sen diyorsun ki:
 Bir sayının:
 
 * (p)'ye bölünmeme ihtimali:
-  [
+  $$[
   1 - \frac{1}{p}
-  ]
+  ]$$
 
 👉 çünkü:
 
 * her (p) bir kolon seti kaplıyor
-* oranı ≈ (1/p)
+* $$oranı ≈ (1/p)$$
 
 ---
 
@@ -40,9 +40,9 @@ Bir sayının:
 
 Bağımsız gibi düşünürsek:
 
-[
+$$[
 P(\text{asal}) \approx \prod_{p \le x} \left(1 - \frac{1}{p}\right)
-]
+]$$
 
 ---
 
@@ -63,9 +63,9 @@ Senin dilin:
 
 Matematik:
 
-[
+$$[
 \text{boşluk oranı} = \prod (1 - 1/p)
-]
+]$$
 
 👉 Yani:
 
@@ -77,10 +77,10 @@ Matematik:
 
 Bilinen sonuç:
 
-[
+$$[
 \prod_{p \le x} \left(1 - \frac{1}{p}\right)
 \sim \frac{1}{\ln x}
-]
+]$$
 
 ---
 
@@ -88,9 +88,9 @@ Bilinen sonuç:
 
 Buradan:
 
-[
+$$[
 \pi(x) \approx \frac{x}{\ln x}
-]
+]$$
 
 Bu:
 
@@ -110,9 +110,9 @@ Senin sistemde:
 
 👉 kalan boşluk:
 
-[
+$$[
 \sim \frac{1}{\ln x}
-]
+]$$
 
 ---
 
@@ -126,7 +126,7 @@ Yani:
 
 * globalde:
 
-  * (1/\ln x)
+  * $$(1/\ln x)$$
 * lokalde:
 
   * dar/geniş boşluklar
@@ -146,7 +146,7 @@ klasik teori:
 
 👉 makro yapı:
 
-* (\pi(x))
+* $$(\pi(x))$$
 
 ---
 
@@ -165,7 +165,7 @@ klasik teori:
 
 * bu yaklaşım:
 
-  * (\pi(x))'i **yaklaşık verir**
+  * $$(\pi(x))$$ 'i **yaklaşık verir**
 * ama:
 
   * tam sayım (exact) vermez
@@ -187,9 +187,9 @@ Senin modelde ekstra bilgi var:
 
 👉 kolon yoğunluğu → lokal asal yoğunluğu
 
-[
+$$[
 \pi(x + \Delta) - \pi(x)
-]
+]$$
 
 yani:
 
@@ -210,10 +210,10 @@ Senin model:
 
 ## 🎯 Çok net özet
 
-* kolonlar = (1/p) eleme
+* kolonlar = $$(1/p)$$ eleme
 * üst üste binme = çarpım
-* boşluk = (1/\ln x)
-* sonuç = (\pi(x))
+* boşluk = $$(1/\ln x)$$
+* sonuç = $$(\pi(x))$$
 
 ---
 
@@ -230,16 +230,16 @@ Harika! Şimdi senin geometrik kolon-patern modelini doğrudan kullanarak küç�
 * Her asal (p), modüler kolonlarla “eleme oranı” (1/p) sağlar.
 
 * Toplam eleme oranı:
-  [
+  $$[
   E(x) = 1 - \prod_{p \le \sqrt{x}} \left(1 - \frac{1}{p}\right)
-  ]
+  ]$$
 
 * Geriye kalan (elemeden geçip asal olma ihtimali) yaklaşık:
-  [
+  $$[
   A(x) = \prod_{p \le \sqrt{x}} \left(1 - \frac{1}{p}\right)
-  ]
+  ]$$
 
-* Bu oran (A(x)) bize (x)’e kadar olan sayıların yaklaşık asal oranını verir.
+* Bu oran $$(A(x))$$ bize (x)’e kadar olan sayıların yaklaşık asal oranını verir.
 
 ---
 
@@ -247,16 +247,16 @@ Harika! Şimdi senin geometrik kolon-patern modelini doğrudan kullanarak küç�
 
 * Belirli bir (x) için (mesela (10^5))
 
-* (p \le \sqrt{x}) asal listesi çıkartılır
+* $$(p \le \sqrt{x})$$ asal listesi çıkartılır
 
-* Çarpım (\prod (1 - 1/p)) hesaplanır
+* Çarpım $$(\prod (1 - 1/p))$$ hesaplanır
 
 * Asal tahmini:
-  [
+  $$[
   \pi_{tahmin}(x) = x \times A(x)
-  ]
+  ]$$
 
-* Gerçek asal sayısı (\pi(x)) ile karşılaştırılır.
+* Gerçek asal sayısı $$(\pi(x))$$ ile karşılaştırılır.
 
 ---
 
@@ -298,7 +298,7 @@ print(f"Actual π({x}) = {primepi(x)}")
 
 ## 4. Sonuçlar (Benim hesapladığım)
 
-* (x = 100{,}000)
+* $$(x = 100{,}000)$$
 
 | Tahmin (model) | Gerçek π(x) | Fark (%)     |
 | -------------- | ----------- | ------------ |
@@ -309,7 +309,7 @@ print(f"Actual π({x}) = {primepi(x)}")
 ## 5. Yorum
 
 * Yaklaşım çok başarılı!
-* Modelin temel çarpım formülü (\prod (1 - 1/p)) zaten bilinen Euler-Poincaré formuna denk düşüyor.
+* Modelin temel çarpım formülü $$(\prod (1 - 1/p))$$ zaten bilinen Euler-Poincaré formuna denk düşüyor.
 * Senin kolon modelin bu olasılık hesabını geometrik olarak anlamlandırıyor.
 
 ---
@@ -341,23 +341,23 @@ Harika! O zaman şimdi senin kolon-patern modelini kullanarak **küçük aralık
 
 ## 1️⃣ Deneyin Temel Planı
 
-* Seçilen bir aralık: ([x, x + \Delta])
-  Örnek: ([10{,}000, 11{,}000]) → 1000 sayılık blok
+* Seçilen bir aralık: $$([x, x + \Delta])$$
+  Örnek: $$([10{,}000, 11{,}000])$$ → 1000 sayılık blok
 * Her sayının **hangi kolonlara düştüğünü** ve boşlukları hesapla
 * “Kolon boşlukları = elemeden geçme olasılığı”
 * Tahmini asal sayısı = aralık uzunluğu × boşta kalan oran
 
 Matematiksel formül (senin patern diliyle):
 
-[
+$$[
 \pi(x, x+\Delta) \approx \Delta \times \prod_{p \le \sqrt{x+\Delta}} \left(1 - \frac{\text{boşluk sayısı / kolon}}{p}\right)
-]
+]$$
 
 Ama pratikte basit versiyon:
 
-[
+$$[
 \pi_{tahmin}(x, x+\Delta) \approx \Delta \times \prod_{p \le \sqrt{x+\Delta}} \left(1 - \frac{1}{p}\right)
-]
+]$$
 
 ---
 
@@ -447,12 +447,12 @@ Kolon sistemi, sayıları **bileşikler ve potansiyel asallar** olarak ayıran g
 
 Bir sayı aralığında (x)’e kadar asalların olasılığı yaklaşık olarak:
 
-[
+$$[
 A(x) \approx \prod_{p \le \sqrt{x}} \left(1 - \frac{1}{p}\right)
-]
+]$$
 
-* (p) = küçük asal kolonlar ((p \le \sqrt{x}))
-* (1/p) = kolonun kapladığı oran
+* $$(p)$$ = küçük asal kolonlar $$((p \le \sqrt{x}))$$
+* $$(1/p)$$ = kolonun kapladığı oran
 
 ---
 
@@ -461,30 +461,30 @@ A(x) \approx \prod_{p \le \sqrt{x}} \left(1 - \frac{1}{p}\right)
 ### 2.1 Temel Adımlar
 
 1. Bilinen bir asal (p) seçilir.
-2. Potansiyel asallar aralığı oluşturulur: ([p+1, p+1+G]), burada (G) yeterince büyük bir gap kontrol aralığıdır.
+2. Potansiyel asallar aralığı oluşturulur: $$([p+1, p+1+G])$$ , burada (G) yeterince büyük bir gap kontrol aralığıdır.
 3. Küçük asal kolonlar kurulur:
 
-[
+$$[
 \text{Kolonlar} = {q \text{ asal } \mid q \le \sqrt{p+G}}
-]
+]$$
 
 4. Her kolon, kendi katlarını “dolu” olarak işaretler.
 5. İlk boş kolon, sonraki asal (p_{n+1})’i verir.
 
 ### 2.2 Formül
 
-* Sayı aralığı: (S = {p+1, \dots, p+G})
+* Sayı aralığı: $$(S = {p+1, \dots, p+G})$$
 * Kolon işareti (dolu/bileşik):
 
-[
+$$[
 \text{Occupied}(n) = \bigvee_{q \le \sqrt{p+G}} (n \bmod q = 0)
-]
+]$$
 
-* İlk boş kolon (True = boş) = sonraki asal (p_{n+1})
+* İlk boş kolon (True = boş) = sonraki asal $$(p_{n+1})$$
 
-[
+$$[
 p_{n+1} = \min { n \in S \mid \text{Occupied}(n) = \text{False} }
-]
+]$$
 
 ---
 
@@ -493,9 +493,9 @@ p_{n+1} = \min { n \in S \mid \text{Occupied}(n) = \text{False} }
 * Boş kolonlar, 1-2 veya 2-1 paternleri ile düzenlenir.
 * Ortalama gap (aralık uzunluğu) yaklaşık olarak:
 
-[
+$$[
 \text{Ortalama gap} \sim \ln p
-]
+]$$
 
 * Max/min gap, kolon boşluk paternine bağlıdır.
 
@@ -505,11 +505,11 @@ p_{n+1} = \min { n \in S \mid \text{Occupied}(n) = \text{False} }
 
 * Örnek: Liste halinde p→p+1 asallar:
 
-[
+$$[
 103, 107, 109, 113, 127, 131, 137, 139, 149, 151
-]
+]$$
 
-* En büyük hedef asal = 151 → (\sqrt{151} \approx 12.3)
+* En büyük hedef asal = 151 → $$(\sqrt{151} \approx 12.3)$$
 * Kullanılan küçük asal kolonlar: (2,3,5,7,11)
 
 **Toplam küçük asal kolon:** 5 adet
@@ -541,11 +541,11 @@ Boş kolon:  -   ✔ -  -   -   ✔   -   - -  ✔   -   -   -   ✔
 
 * **Deterministik:** Küçük asal kolonlar yeterli → p→p+1 kesin.
 * **Yerel tahmin:** Kolon boşlukları ile lokal gap tahmini mümkün.
-* **Büyük aralık:** Euler çarpımı ile global (\pi(x)) tahmini sağlanır.
+* **Büyük aralık:** Euler çarpımı ile global $$(\pi(x))$$ tahmini sağlanır.
 * **Formül haline gelmiş:**
 
-[
+$$[
 p_{n+1} = \min { n > p_n \mid n \bmod q \neq 0, \forall q \le \sqrt{p_{n+1}} }
-]
+]$$
 
 ---
