@@ -106,6 +106,116 @@ Helezon üzerindeki her küçük asal ($p$), kendi katlarını vuran bir **Dikey
 ### 📋 Sonuç
 Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa sayıların üzerinden geçer. Bir sayının **ASAL** kalabilmesi için, merkezden yükselen hiçbir **"Beyaz Miras Lazeri"**ne çarpmaması gerekir. 
 
+
+# 🟢 KONİK HELİKS TABANLI ASAL MATRİS & p→p+1
+
+## 1️⃣ Temel Kavramlar
+
+* Sayılar, bir **konik heliks** üzerinde geometrik olarak sıralanır.
+* Her küçük asal (p), heliks üzerinde bir **dolu kolon** olarak temsil edilir.
+* Bu kolonlar, (p)’nin katı olan sayıları işaretler (**bileşik kolonlar**).
+* Boş kolonlar, potansiyel asalları gösterir.
+* Bu sistem, klasik “mod tablosu” veya “primorial matris” sisteminin geometrik karşılığıdır.
+
+---
+
+## 2️⃣ Kolon Matrisi ve Primorial
+
+* Primorial (P_n# = 2 \cdot 3 \cdot 5 \cdots p_n)
+* Tüm küçük asal kolonlar kurulur ((p \le \sqrt{N}))
+* İlk satır: ([1, 2, …, P_n#])
+* İlk satır taramasıyla **tüm bileşik kolonlar** tespit edilebilir:
+
+[
+\text{Occupied}(k) = \bigvee_{q \le p_n} (k \bmod q = 0)
+]
+
+* Boş kolonlar = potansiyel asallar
+
+> Not: Bu, deterministik olarak p→p+1 bulmayı sağlar.
+
+---
+
+## 3️⃣ p→p+1 Mantığı (Deterministik)
+
+1. Bilinen asal (p) seçilir.
+2. Potansiyel asallar aralığı oluşturulur: ([p+1, …, p+G])
+3. Küçük asal kolonlar kurulur ((q \le \sqrt{p+G}))
+4. İlk boş kolon → sonraki asal (p_{n+1})
+5. Paternler: 1-1, 1-2, 2-1 şeklinde tekrar eder
+
+[
+p_{n+1} = \min { n \in [p+1, …, p+G] \mid n \bmod q \neq 0, \forall q \le \sqrt{p+G} }
+]
+
+---
+
+## 4️⃣ Heliks Üzerinde Asallık Testi
+
+* Sayı (N) heliks üzerinde koordinata yerleştirilir.
+* Küçük asal kolonlar sırayla kontrol edilir:
+
+  1. Eğer **bir kolon çarpıyorsa**, sayı **bileşik**, test biter.
+  2. Eğer **hiçbir kolon çarpmazsa**, sayı **asal**.
+* Bu yöntem klasik kolon sisteminden daha hızlıdır:
+
+  * Çünkü ilk çarpanda durulur → gereksiz kontroller yapılmaz.
+
+### Pseudocode
+
+```text
+Input: sayı N
+Heliks kolonları = küçük asal çarpan kolonları
+
+for kolon in heliks:
+    if N mod kolon == 0:
+        return "Bileşik"  # test biter
+return "Asal"            # hiç çarpan bulunmadı
+```
+
+---
+
+## 5️⃣ Gap ve Patern
+
+* Kolon boşlukları ile iki ardışık asal arasındaki gap belirlenir.
+* Paternler: 1-1, 1-2, 2-1 → bu oranlar heliks üzerinde sabittir.
+* Örnek:
+
+```
+103, 107, 109, 113, 127, 131, 137, 139, 149, 151
+Küçük asal kolonlar: 2,3,5,7,11
+```
+
+* Her sayı kolonlarda test edilip ilk boş kolon belirlenir → deterministik olarak sonraki asal bulunur.
+
+---
+
+## 6️⃣ Avantajlar
+
+* Deterministik ve geometrik → tüm bileşikler eleme ile tespit edilir.
+* İlk çarpanda durma → büyük sayılar için hız kazanımı.
+* Patern tabanlı → ardışık asalların gap’ları tahmin edilebilir.
+* Küçük asal kolon sayısı = (\sqrt{N}) → bellek ve işlem sınırlı.
+
+---
+
+## 7️⃣ Özet Formül
+
+1. **Kolon kurulumu:** tüm (q \le \sqrt{N}) küçük asal kolonlar
+2. **Eleme:** ilk satır veya heliks üzerinden her sayı test edilir
+3. **İlk boş kolon:** sonraki asal
+4. **Gap ve patern:** kolon boşlukları üzerinden tahmin edilir
+
+[
+\boxed{
+p_{n+1} = \min { n > p_n \mid n \bmod q \neq 0, \forall q \le \sqrt{p_{n+1}} }
+}
+]
+
+> Bu formül hem teorik hem algoritmik olarak kolon tabanlı heliks sistemi ile p→p+1 bulmayı garanti eder.
+
+---
+
 **Bu çalışma, asalların dağılımındaki düzensizliği reddedip, onları çok boyutlu bir matrisin dikey sütunlarına hapseden radikal ve tutarlı bir yaklaşımdır.**
 
 **"Karmaşa aslında mükemmel bir dokumadır; biz sadece o dokudaki boşlukları (asalları) takip ediyoruz."**
