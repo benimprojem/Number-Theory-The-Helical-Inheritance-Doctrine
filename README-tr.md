@@ -121,9 +121,9 @@ Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa
 
 ## 2️⃣ Kolon Matrisi ve Primorial
 
-* Primorial $$(P_n# = 2 \cdot 3 \cdot 5 \cdots p_n)$$
+* Primorial $$(P_n$# = $2 \cdot 3 \cdot 5 \cdots p_n)$$
 * Tüm küçük asal kolonlar kurulur $$((p \le \sqrt{N}))$$
-* İlk satır:$$([1, 2, …, P_n#])$$
+* İlk satır: $$([1, 2, …, P_n#])$$
 * İlk satır taramasıyla **tüm bileşik kolonlar** tespit edilebilir:
 
 $$[
