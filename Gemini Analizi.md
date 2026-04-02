@@ -9,7 +9,7 @@
 | Sembol | Tanım | Matematiksel Karşılığı / Fonksiyonu |
 | :--- | :--- | :--- |
 | $p_n$ | **Seviye (Level):** İncelenen asal katmanı. | $P = \{2, 3, 5, 7, 11, \dots\}$ |
-| $M_n$ | **Matris Genişliği:** Toplam döngü boyutu. | $M_n = \prod_{i=1}^{n} p_i = p_n\#$ (Primorial) |
+| $M_n$ | **Matris Genişliği:** Toplam döngü boyutu. | $M_n = \prod_{i=1}^{n} p_i = p_n$\# (Primorial) |
 | $K_n$ | **Miras Kolon Kapasitesi:** Aktif alan. | $K_n = M_{n-1}$ (Önceki genişlik hedef sayıdır) |
 | $\Delta$ | **Segment:** İncelenen sayısal aralık. | $x_{bitiş} - x_{başlangıç}$ |
 | $R$ | **Patern Oranı:** Hizalanma karakteri. | $R = \frac{\text{Mesafe}}{\text{Mod}}$ (Geometrik katsayı) |
