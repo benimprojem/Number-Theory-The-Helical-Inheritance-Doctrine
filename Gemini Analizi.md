@@ -127,7 +127,7 @@ $$R = \frac{\text{Hedef Kolonlar Arası Mesafe}}{p_n}$$
 
 ## 3. Sayı Doğrusu Katlanma ve Sabitlik (Mod0)
 
-Geleneksel formüller sayı büyüdükçe (x → ∞) hantallaşır. TCBM, **Primorial ($p_n\#$)** periyotlarla dikey sabitleme yapar.
+Geleneksel formüller sayı büyüdükçe (x → ∞) hantallaşır. TCBM, **Primorial ($p_n$\#)** periyotlarla dikey sabitleme yapar.
 
 **Geleneksel (Eratosthenes):**
 $$S(x, p) = \{ n \le x : p \nmid n \}$$
