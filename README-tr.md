@@ -40,7 +40,7 @@
 
 ## Tek Çarpan Temel Matris
 
-1. Mikro Yapı: > Oluşturulabilecek en küçük matris p7 ve üzerindeki sayılar için $Px3$ formundadır. Burada her bir $P$ birimi, 3 kolonluk bir alt uzay (3*p) yaratır. 
+1. Mikro Yapı: > Oluşturulabilecek en küçük matris p7 ve üzerindeki sayılar için $Px3-1$ formundadır. Burada her bir $P$ birimi, 3 kolonluk bir alt uzay $(3*p)$ yaratır, ama 3 kolonluk matrisde son p modu katlanıp bir sonraki satırın ilki olur. Katları yani $6xp-1$  olursa sadce son p modu katlanır her zaman. Yani 6xp matrisinde $5p$ kolon oluşur..
 Bu, "Genişlik - Hedef Kolon" dengesini kuran en temel hizalamadır.
 
 2. "Katlanabilir Mod0" Kuralı:
