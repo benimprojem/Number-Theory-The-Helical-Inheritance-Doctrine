@@ -105,7 +105,78 @@ Helezon üzerindeki her küçük asal ($p$), kendi katlarını vuran bir **Dikey
 
 ### 📋 Sonuç
 Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa sayıların üzerinden geçer. Bir sayının **ASAL** kalabilmesi için, merkezden yükselen hiçbir **"Beyaz Miras Lazeri"**ne çarpmaması gerekir. 
+### 1. Ters Koni Helezonu – Parametrik Denklemler (Cartesian Koordinatlar)
 
+Her doğal sayı **n** için (veya sadece asallar için) koordinatlar şöyle tanımlanır:
+
+\[
+\begin{align}
+\theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\[4pt]
+R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\[4pt]
+Z(n) &= Z_0 - n \cdot h && \text{(yükseklik – ters yön için negatif)} \\[4pt]
+x(n) &= R(n) \cdot \cos(\theta(n)) \\[4pt]
+y(n) &= R(n) \cdot \sin(\theta(n)) \\[4pt]
+z(n) &= Z(n)
+\end{align}
+\]
+
+- **\(k\)**: Açısal yoğunluk katsayısı (örnek: \(k = 0.1\) veya \(k = \frac{2\pi}{ML}\) ile matrise bağlı).  
+- **\(g\)**: Genişleme katsayısı (koninin açısını belirler, örneğin \(g = 0.05\)).  
+- **\(h\)**: Yükselme (veya alçalma) katsayısı (örneğin \(h = 0.03\)).  
+- **\(Z_0\)**: Başlangıç yüksekliği (koninin tepe noktasını ayarlar, örneğin \(Z_0 = 10\)).  
+
+**Ters koni etkisi** tam olarak **\(Z(n) = Z_0 - n \cdot h\)** satırından gelir.  
+n büyüdükçe Z **azalırken** R büyür → koni **yukarıdan aşağıya** daralır (senin görselindeki gibi).
+
+### 2. Matris + Dikey Lazer Hatları Entegrasyonu (En Önemli Kısım)
+
+Sadece düzgün spiral değil, **matristeki dikey kolonlar** (senin beyaz lazer hatların) helezon üzerinde **sabit açısal radyal ışınlar** olur. Bunun için θ’yı **n** yerine **kolon numarası** ile bağla:
+
+Her sayı \(X\) için:
+
+\[
+\theta(X) = 2\pi \times \frac{c}{ML_k}
+\]
+
+burada  
+- \(c = X \mod ML_k\) (matristeki sütun / kolon)  
+- \(ML_k =\) mevcut primorial matris genişliği  
+
+Sonra koordinatlar:
+
+\[
+\begin{align}
+R(X) &= X \cdot g \\
+Z(X) &= Z_0 - X \cdot h \\
+x(X) &= R(X) \cdot \cos\bigl(\theta(X)\bigr) \\
+y(X) &= R(X) \cdot \sin\bigl(\theta(X)\bigr) \\
+z(X) &= Z(X)
+\end{align}
+\]
+
+Bu sayede:
+- Aynı sütundaki tüm sayılar (**Mod 0** kuralına uyanlar) **aynı θ** değerinde kalır → **dikey lazer hattı** 3D’de radyal ışın olur.
+- Senin minimum matris (6p) ve 1-2 paternin bu θ değerlerini otomatik belirler.
+
+### 3. Sadece Asallar İçin “Asal İmza Helisi”
+
+Görselindeki gibi sadece asalları çizmek için:
+- n yerine **asal p**’leri al,
+- Renk: p’nin büyüklüğüne göre (örneğin log(p) veya doğrudan p ile renk skalası – senin görselindeki gibi sarıdan mora).
+
+Parametrik denklemler aynı kalır, sadece n → p olarak değiştirilir.
+
+### 4. Pratik Örnek Parametreler (Senin Görseline Yakın)
+
+| Parametre | Önerilen Değer          | Açıklama                              |
+|-----------|-------------------------|---------------------------------------|
+| \(k\)     | \(0.08\) veya \(2\pi / ML\) | Spiral yoğunluğu                      |
+| \(g\)     | \(0.04\)                | Koni açısı (genişleme)                |
+| \(h\)     | \(0.025\)               | Yükseklik adımı                       |
+| \(Z_0\)   | \(12\)                  | Koninin üst başlangıç yüksekliği      |
+| \(ML_k\)  | 210 veya 2310           | Mevcut primorial seviyesi             |
+
+---
 
 # 🟢 KONİK HELİKS TABANLI ASAL MATRİS & p→p+1
 
