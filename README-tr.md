@@ -242,14 +242,14 @@ Her doğal sayı **n** için (veya sadece asallar için) koordinatlar şöyle ta
 
 $$[
 \begin{align}
-\theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\[4pt]\\
-R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\[4pt]\\
-Z(n) &= Z_0 - n \cdot h && \text{(yükseklik – ters yön için negatif)} \\[4pt]\\
-x(n) &= R(n) \cdot \cos(\theta(n)) \\[4pt]\\
-y(n) &= R(n) \cdot \sin(\theta(n)) \\[4pt]\\
+\theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\
+R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\
+Z(n) &= Z_0 - n \cdot h && \text{(yükseklik – ters yön için negatif)} \\
+x(n) &= R(n) \cdot \cos(\theta(n)) \\
+y(n) &= R(n) \cdot \sin(\theta(n)) \\
 z(n) &= Z(n)\\
 \end{align}
-\]$$
+]$$
 
 - **\(k\)**: Açısal yoğunluk katsayısı (örnek: $$\(k = 0.1\)$$ veya $$\(k = \frac{2\pi}{ML}\)$$ ile matrise bağlı).  
 - **\(g\)**: Genişleme katsayısı (koninin açısını belirler, örneğin \(g = 0.05\)).  
