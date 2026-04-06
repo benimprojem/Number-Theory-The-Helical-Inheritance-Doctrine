@@ -242,18 +242,12 @@ Her doğal sayı **n** için (veya sadece asallar için) koordinatlar şöyle ta
 
 $$[
 \begin{align}
-\theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\[4pt]
-
-R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\[4pt]
-
-Z(n) &= Z_0 - n \cdot h && \text{(yükseklik – ters yön için negatif)} \\[4pt]
-
-x(n) &= R(n) \cdot \cos(\theta(n)) \\[4pt]
-
-y(n) &= R(n) \cdot \sin(\theta(n)) \\[4pt]
-
-z(n) &= Z(n)
-
+\theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\[4pt]\\
+R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\[4pt]\\
+Z(n) &= Z_0 - n \cdot h && \text{(yükseklik – ters yön için negatif)} \\[4pt]\\
+x(n) &= R(n) \cdot \cos(\theta(n)) \\[4pt]\\
+y(n) &= R(n) \cdot \sin(\theta(n)) \\[4pt]\\
+z(n) &= Z(n)\\
 \end{align}
 \]$$
 
