@@ -1,5 +1,5 @@
 # 🌌 Doğal Sayıların Matrisi (Level 1 - 67)
-
+**"Asal sayı; geçmişin ritmik mirasına (vuruşlarına) direnç gösteren, hiçbir atanın frekansıyla çakışmayan ve kendi özgün dalga boyunu başlatan ilk maddedir."**
 
 ## Tüm Çarpanlar Büyük Matris ve Ardışık Miras Kuralı
 
@@ -236,6 +236,7 @@ Helezon üzerindeki her küçük asal ($p$), kendi katlarını vuran bir **Dikey
 
 ### 📋 Sonuç
 Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa sayıların üzerinden geçer. Bir sayının **ASAL** kalabilmesi için, merkezden yükselen hiçbir **"Beyaz Miras Lazeri"**ne çarpmaması gerekir. 
+
 ### 1. Ters Koni Helezonu – Parametrik Denklemler (Cartesian Koordinatlar)
 
 Her doğal sayı **n** için (veya sadece asallar için) koordinatlar şöyle tanımlanır:
