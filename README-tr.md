@@ -240,14 +240,20 @@ Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa
 
 Her doğal sayı **n** için (veya sadece asallar için) koordinatlar şöyle tanımlanır:
 
-$$\[
+$$[
 \begin{align}
 \theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\[4pt]
+
 R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\[4pt]
+
 Z(n) &= Z_0 - n \cdot h && \text{(yükseklik – ters yön için negatif)} \\[4pt]
+
 x(n) &= R(n) \cdot \cos(\theta(n)) \\[4pt]
+
 y(n) &= R(n) \cdot \sin(\theta(n)) \\[4pt]
+
 z(n) &= Z(n)
+
 \end{align}
 \]$$
 
@@ -270,8 +276,8 @@ $$[
 \]$$
 
 burada  
-- \(c = X \mod ML_k\) (matristeki sütun / kolon)  
-- \(ML_k =\) mevcut primorial matris genişliği  
+- $$(c = X \mod ML_k\)$$ (matristeki sütun / kolon)  
+- $$(ML_k =\)$$ mevcut primorial matris genişliği  
 
 Sonra koordinatlar:
 
