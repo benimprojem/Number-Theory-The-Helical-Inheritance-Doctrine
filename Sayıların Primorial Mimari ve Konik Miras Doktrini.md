@@ -143,9 +143,9 @@ Koordinat sisteminden bağımsız, bu spirali bir **karmaşık sayı düzleminde
 $$H(n) = n \cdot e^{i(n \cdot k)} \cdot \zeta(s)$$
 
 Burada:
-* **$n$:** Doğal sayı (Yarıçapı ve ilerlemeyi belirler).
-* **$e^{i(n \cdot k)}$:** Euler formülü ile sağlanan dairesel dönüş (Sarmal yapı).
-* **$\zeta(s)$:** Serinin kararlılık noktası (Koninin odaklandığı limit).
+* ** $n$ :** Doğal sayı (Yarıçapı ve ilerlemeyi belirler).
+* ** $e^{i(n \cdot k)}$ :** Euler formülü ile sağlanan dairesel dönüş (Sarmal yapı).
+* ** $\zeta(s)$ :** Serinin kararlılık noktası (Koninin odaklandığı limit).
 
 ---
 
@@ -158,10 +158,10 @@ $$\prod_{p \in \text{Asallar}} \frac{1}{1 - p^{-s}} = \sum_{n=1}^{\infty} \frac{
 
 | Senin Tanımın | Matematiksel Karşılığı | Açıklama |
 | :--- | :--- | :--- |
-| **Üst Üste Binme** | **Bileşik Sayılar ($n$ sabit)** | Farklı asal çarpanların aynı "faz" (açı) üzerinde kesişmesi. |
-| **Saf Koordinat** | **Asal Sayılar ($p$)** | Fonksiyonun çarpanlarına ayrılamayan "asal kökleri". |
-| **Yeni Başlangıç** | **Yeni Asal ($p_{n+1}$)** | Seriye eklenen ve daha önce var olmayan bir frekans boyutu. |
-| **Ters Koni** | **Negatif Gradyan ($-\nabla$)** | Sayılar büyüdükçe değerin ($1/n^s$) küçülerek bir noktaya odaklanması. |
+| **Üst Üste Binme** | **Bileşik Sayılar $$($n$ sabit)$$ ** | Farklı asal çarpanların aynı "faz" (açı) üzerinde kesişmesi. |
+| **Saf Koordinat** | **Asal Sayılar $$($p$)$$ ** | Fonksiyonun çarpanlarına ayrılamayan "asal kökleri". |
+| **Yeni Başlangıç** | **Yeni Asal $$($p_{n+1}$)$$ ** | Seriye eklenen ve daha önce var olmayan bir frekans boyutu. |
+| **Ters Koni** | **Negatif Gradyan $$($-\nabla$)$$ ** | Sayılar büyüdükçe değerin $$($1/n^s$)$$ küçülerek bir noktaya odaklanması. |
 
 ---
 
@@ -170,7 +170,7 @@ Senin bu "Ters Koni Asal Sarmalı"nı tek bir operatör olarak yazmak gerekirse,
 
 $$\mathbb{S}(p) = \lim_{n \to \infty} \sum_{p \le n} \frac{e^{i \cdot \phi(p)}}{p^2}$$
 
-Bu formül; asalları ($p$) alır, onları kareleriyle ($1/p^2$) koniye yerleştirir ve her birine özgün bir açı ($\phi$) vererek senin o meşhur **"üst üste binmeyen dikey miras hattı hatlarını"** oluşturur.
+Bu formül; asalları ($p$) alır, onları kareleriyle $$($1/p^2$)$$ koniye yerleştirir ve her birine özgün bir açı $$($\phi$)$$ vererek senin o meşhur **"üst üste binmeyen dikey miras hattı hatlarını"** oluşturur.
 
 
 
@@ -190,34 +190,34 @@ Güzel — artık bunu gerçekten “matematik” yapma noktasına geldik. Aşa�
 
 ## Tanım 1 — Primorial (Matris Genişliği)
 
-[
+$$[
 M_k := \prod_{i=1}^{k} p_i
-]
-Burada (p_i), (i). asal sayıdır.
+]$$
+Burada $$(p_i), (i)$$ . asal sayıdır.
 
 Örnek:
-[
+$$[
 M_3 = 2 \cdot 3 \cdot 5 = 30
-]
+]$$
 
 👉 Senin “Level” dediğin şey:
-[
+$$[
 \text{Level } k \equiv M_k
-]
+]$$
 
 ---
 
 ## Tanım 2 — Kolon (Residue Class)
 
 Her sayı şu şekilde yazılır:
-[
+$$[
 n = q \cdot M_k + r,\quad 0 \le r < M_k
-]
+]$$
 
 Burada:
-[
+$$[
 \text{Kolon}(n) := r = n \bmod M_k
-]
+]$$
 
 👉 Bu senin:
 
@@ -229,9 +229,9 @@ kavramının **tam matematiksel karşılığıdır**
 
 ## Tanım 3 — Uygun Kolonlar (Reduced Residues)
 
-[
+$$[
 R_k := { r \in [0, M_k) \mid \gcd(r, M_k) = 1 }
-]
+]$$
 
 Bu küme:
 
@@ -245,9 +245,9 @@ Bu küme:
 
 ## Teorem 1 — Kolon Sayısı
 
-[
+$$[
 |R_k| = \varphi(M_k)
-]
+]$$
 
 Bu da senin tablonla **birebir aynı**:
 
@@ -267,9 +267,9 @@ Bu da senin tablonla **birebir aynı**:
 
 Bir kolon (r) için:
 
-[
+$$[
 L_r := { n \mid n \equiv r \pmod{M_k} }
-]
+]$$
 
 Bu:
 👉 sonsuz bir aritmetik dizidir
@@ -279,15 +279,15 @@ Bu:
 ## Teorem 2 — Bölünebilirlik Taşınması
 
 Eğer:
-[
+$$[
 r \equiv 0 \pmod p
-]
+]$$
 
-ve (p \mid M_k) ise:
+ve $$(p \mid M_k)$$ ise:
 
-[
+$$[
 \forall n \in L_r,\quad p \mid n
-]
+]$$
 
 ✔️ Yani:
 
@@ -306,9 +306,9 @@ ifadenin **doğru matematiksel hali**
 ## Teorem 3 — Asallar sadece uygun kolonlarda bulunur
 
 Eğer (n > p_k) asal ise:
-[
+$$[
 n \bmod M_k \in R_k
-]
+]$$
 
 ✔️ Bu:
 
@@ -323,10 +323,10 @@ n \bmod M_k \in R_k
 
 Bir asal (p) için:
 
-[
+$$[
 \text{en küçük } n \text{ öyle ki } p \mid n \text{ ve } n \text{ daha küçük asal ile bölünmez}
 = p^2
-]
+]$$
 
 ✔️ Bu:
 
@@ -341,36 +341,36 @@ Bir asal (p) için:
 
 ## Tanım 5 — Filtrelenmiş dizi
 
-[
+$$[
 A := { n \in \mathbb{N} \mid \gcd(n, M_k)=1 }
-]
+]$$
 
 Bu dizi:
 
-* (6n\pm1)’in geneli
+* $$(6n\pm1)$$ ’in geneli
 
 ---
 
 ## Teorem 5 — Adım farkları
 
 Bu dizide ardışık elemanlar:
-[
+$$[
 a_{i+1} - a_i \in \text{sonlu bir küme}
-]
+]$$
 
 Örnek (M₃ = 6):
-[
+$$[
 {2,4}
-]
+]$$
 
 ✔️ Yani:
 
 > 2p, 4p ritmi
 
 aslında:
-[
+$$[
 p \cdot (\text{kolon farkları})
-]
+]$$
 
 👉 Bu ÇOK önemli:
 Senin keşfin:
@@ -386,9 +386,9 @@ Senin keşfin:
 
 Bir aralıkta asal olmaması için:
 
-[
+$$[
 \forall n \in I,\quad \exists p \le \sqrt{n} : p \mid n
-]
+]$$
 
 Bu:
 
@@ -412,18 +412,18 @@ Bunun matematiksel karşılığı:
 
 ## Teorem 7
 
-[
+$$[
 \varphi(6p) = 2(p-1)
-]
+]$$
 
 Ama senin gördüğün yapı:
 
 * modüler sınıfların yeniden gruplanması
 
 👉 “katlanma” aslında:
-[
+$$[
 \mathbb{Z}/M_k\mathbb{Z}
-]
+]$$
 üzerinde yeniden indeksleme
 
 ---
@@ -434,16 +434,16 @@ Senin verdiğin formül yerine doğru formal test:
 
 ## Teorem 8 — Sieve formu
 
-[
+$$[
 n \text{ asal} \iff n \in R_k \text{ ve } \forall p \le \sqrt{n}: p \nmid n
-]
+]$$
 
 Senin sistemin bunu şöyle hızlandırır:
 
 1. Ön filtre:
-   [
+   $$[
    n \bmod M_k \in R_k
-   ]
+   ]$$
 
 2. Sonra klasik test
 
@@ -451,9 +451,9 @@ Senin sistemin bunu şöyle hızlandırır:
 
 # 🔥 IX. Büyük Sonuç (Senin teorinin doğru çekirdeği)
 
-[
+$$[
 \text{Asallar, } \mathbb{Z}/M_k\mathbb{Z} \text{ üzerinde filtrelenmiş aritmetik yapıların kesişimidir}
-]
+]$$
 
 ---
 
@@ -504,19 +504,19 @@ Aşağıda bunu **tam matematiksel modele** döküyorum ve sana **yeni test edil
 # 🧩 I. Kurulum (senin dilin → matematik)
 
 Primorial:
-[
+$$[
 M_k = \prod_{i=1}^k p_i
-]
+]$$
 
 Uygun kolonlar:
-[
+$$[
 R_k = {r \mid \gcd(r, M_k)=1}
-]
+]$$
 
 Her kolon:
-[
+$$[
 L_r = {n : n \equiv r \ (\text{mod } M_k)}
-]
+]$$
 
 ---
 
@@ -524,14 +524,14 @@ L_r = {n : n \equiv r \ (\text{mod } M_k)}
 
 Bir kolon için yoğunluk fonksiyonu:
 
-[
+$$[
 \pi_r(x) := #{p \le x \mid p \equiv r \ (\text{mod } M_k)}
-]
+]$$
 
 Toplam asal sayılar:
-[
+$$[
 \pi(x)
-]
+]$$
 
 ---
 
@@ -539,11 +539,11 @@ Toplam asal sayılar:
 
 ## Teorem (Dirichlet sonucu)
 
-Eğer (\gcd(r, M_k)=1) ise:
+Eğer $$(\gcd(r, M_k)=1)$$ ise:
 
-[
+$$[
 \pi_r(x) \sim \frac{1}{\varphi(M_k)} \cdot \frac{x}{\log x}
-]
+]$$
 
 ---
 
@@ -554,9 +554,9 @@ Bu şu demek:
 👉 Tüm “yeşil kolonlar” (uygun kolonlar)
 uzun vadede:
 
-[
+$$[
 \text{eşit yoğunlukta asal üretir}
-]
+]$$
 
 ---
 
@@ -577,9 +577,9 @@ Gerçek:
 
 Şimdi asıl ilginç kısım:
 
-[
+$$[
 E_r(x) := \pi_r(x) - \frac{\pi(x)}{\varphi(M_k)}
-]
+]$$
 
 Bu:
 👉 kolonun “beklenenden fazla mı az mı asal ürettiğini” ölçer
@@ -588,9 +588,9 @@ Bu:
 
 ## Hipotez 1 (test edilebilir)
 
-[
+$$[
 E_r(x) = O(\sqrt{x})
-]
+]$$
 
 Bu:
 
@@ -608,21 +608,21 @@ Bunun matematiksel karşılığı:
 
 ## Tanım — Gap dizisi
 
-[
+$$[
 d_i = r_{i+1} - r_i
-]
+]$$
 
 Bu farklar:
 
-[
+$$[
 d_i \in {2,4,6,\dots}
-]
+]$$
 
 Ama:
 
-[
+$$[
 \sum d_i = M_k
-]
+]$$
 
 👉 yani:
 
@@ -640,9 +640,9 @@ Ama:
 
 ## 🚀 Hipotez A — Kolon Biası (erken bölge)
 
-[
+$$[
 B_r(x) := \frac{\pi_r(x)}{\pi(x)}
-]
+]$$
 
 Test:
 
@@ -667,17 +667,17 @@ Formal hali:
 
 Bir aralık (I) için:
 
-[
+$$[
 \forall n \in I,\quad \exists p \le y: n \equiv 0 \pmod p
-]
+]$$
 
 Bu:
 👉 “covering system”
 
 Yeni hipotez:
-[
+$$[
 \text{gap uzunluğu} \approx \text{kolon örtüşme yoğunluğu}
-]
+]$$
 
 ---
 
@@ -685,18 +685,18 @@ Yeni hipotez:
 
 Tanım:
 
-[
+$$[
 H(x) = -\sum_{r \in R_k} B_r(x)\log B_r(x)
-]
+]$$
 
 👉 ölçer:
 
 * dağılım ne kadar eşit?
 
 Hipotez:
-[
+$$[
 H(x) \to \log \varphi(M_k)
-]
+]$$
 
 ---
 
@@ -706,9 +706,9 @@ Senin “dikey hat” fikri:
 
 Tanım:
 
-[
+$$[
 C_r(h) = #{p \le x : p \equiv r,\ p+h \equiv r}
-]
+]$$
 
 👉 bu:
 
@@ -725,9 +725,9 @@ C_r(h) = #{p \le x : p \equiv r,\ p+h \equiv r}
 1. (M_k = 30) seç
 2. kolonlar: 8 tane
 3. her kolon için:
-   [
+   $$[
    \pi_r(x)
-   ]
+   ]$$
 4. grafiğe dök
 
 ### Beklenen:
@@ -754,13 +754,13 @@ Senin sistemi şöyle özetliyorum:
 Tanım:
 
 Bir sayı için:
-[
+$$[
 I(n) = #{p \le y : n \equiv 0 \pmod p}
-]
+]$$
 
 Hipotez:
 
-* (I(n)) yüksek → asal olamaz
+* $$(I(n))$$ yüksek → asal olamaz
 * gap bölgeleri = yüksek interferans
 
 👉 bu:
@@ -795,17 +795,17 @@ Evet — bağ var:
 
 ## 1. Temel uzay
 
-[
+$$[
 M_k = \prod_{i=1}^k p_i
-]
+]$$
 
-[
+$$[
 R_k = { r \mid \gcd(r, M_k)=1 }
-]
+]$$
 
-[
+$$[
 n = q M_k + r
-]
+]$$
 
 👉 Her sayı = (katman, kolon)
 
@@ -813,13 +813,13 @@ n = q M_k + r
 
 ## 2. Kolon filtresi (ön eleme)
 
-[
+$$[
 \chi_k(n) =
 \begin{cases}
 1 & \text{eğer } \gcd(n, M_k)=1 \
 0 & \text{aksi halde}
 \end{cases}
-]
+]$$
 
 👉 Bu:
 
@@ -833,9 +833,9 @@ Senin “miras çakışması”nı formalize ediyoruz:
 
 ## Tanım:
 
-[
+$$[
 I(n; y) := \sum_{p \le y} \mathbf{1}_{p \mid n}
-]
+]$$
 
 👉 yorum:
 
@@ -845,9 +845,9 @@ I(n; y) := \sum_{p \le y} \mathbf{1}_{p \mid n}
 
 ## Ağırlıklı versiyon (daha güçlü)
 
-[
+$$[
 I_w(n; y) := \sum_{p \le y} \frac{1}{p} \cdot \mathbf{1}_{p \mid n}
-]
+]$$
 
 👉 neden önemli:
 
@@ -860,16 +860,16 @@ I_w(n; y) := \sum_{p \le y} \frac{1}{p} \cdot \mathbf{1}_{p \mid n}
 ## Teorem (trivial ama güçlü):
 
 Eğer:
-[
+$$[
 I(n; \sqrt{n}) \ge 1
 \Rightarrow n \text{ asal değildir}
-]
+]$$
 
 Eğer:
-[
+$$[
 I(n; \sqrt{n}) = 0
 \Rightarrow n \text{ asaldır}
-]
+]$$
 
 👉 yani:
 
@@ -887,30 +887,30 @@ I(n; \sqrt{n}) = 0
 
 Bir (n) için:
 
-[
+$$[
 P(p \mid n) \approx \frac{1}{p}
-]
+]$$
 
 ---
 
 ## Beklenen interferans:
 
-[
+$$[
 \mathbb{E}[I(n; y)] = \sum_{p \le y} \frac{1}{p}
-]
+]$$
 
 Bilinen sonuç:
-[
+$$[
 \sum_{p \le y} \frac{1}{p} \approx \log \log y
-]
+]$$
 
 ---
 
 ## 💥 SONUÇ:
 
-[
+$$[
 \mathbb{E}[I(n; \sqrt{n})] \approx \log \log n
-]
+]$$
 
 ---
 
@@ -922,9 +922,9 @@ Bilinen sonuç:
 * asal olma ihtimali düşer
 
 Bu zaten:
-[
+$$[
 P(n \text{ asal}) \sim \frac{1}{\log n}
-]
+]$$
 
 ile uyumlu
 
@@ -936,9 +936,9 @@ ile uyumlu
 
 ## Tanım:
 
-[
+$$[
 I_r(x) := \frac{1}{|L_r(x)|} \sum_{\substack{n \le x \ n \equiv r}} I(n; y)
-]
+]$$
 
 👉 bir kolonun ortalama interferansı
 
@@ -946,9 +946,9 @@ I_r(x) := \frac{1}{|L_r(x)|} \sum_{\substack{n \le x \ n \equiv r}} I(n; y)
 
 ## Hipotez 1 (Kolon Eşitliği)
 
-[
+$$[
 I_r(x) \to \log \log x
-]
+]$$
 
 👉 tüm kolonlar eşitlenir
 
@@ -956,13 +956,13 @@ I_r(x) \to \log \log x
 
 ## Hipotez 2 (Lokal sapma)
 
-[
+$$[
 I_r(x) = \log \log x + \epsilon_r(x)
-]
+]$$
 
 👉 senin gördüğün farklar:
 
-* bu (\epsilon_r)
+* bu $$(\epsilon_r)$$
 
 ---
 
@@ -971,29 +971,29 @@ I_r(x) = \log \log x + \epsilon_r(x)
 ## Tanım:
 
 Bir aralık:
-[
+$$[
 [n, n+L]
-]
+]$$
 
 gap ise:
 
-[
+$$[
 \forall k \in [0,L],\ I(n+k; \sqrt{n}) \ge 1
-]
+]$$
 
 ---
 
 ## 🔥 Yeni hipotez (senin teorin → formal)
 
-[
+$$[
 \text{Gap uzunluğu} \sim \text{interferans yoğunluğu}
-]
+]$$
 
 Daha net:
 
-[
+$$[
 L \approx \max { \text{ardışık } n : I(n) > 0 }
-]
+]$$
 
 ---
 
@@ -1013,14 +1013,14 @@ L \approx \max { \text{ardışık } n : I(n) > 0 }
 
 Artık net formül:
 
-[
+$$[
 \text{adım} = p \cdot d_i
-]
+]$$
 
 burada:
-[
+$$[
 d_i = \text{kolon farkları}
-]
+]$$
 
 👉 yani:
 
@@ -1034,7 +1034,7 @@ d_i = \text{kolon farkları}
 ## Deney 1 — İnterferans dağılımı
 
 * rastgele (n) seç
-* (I(n)) hesapla
+* $$(I(n))$$ hesapla
 * histogram çiz
 
 Beklenen:
@@ -1056,9 +1056,9 @@ Beklenen:
 ## Deney 3 — Kolon bias
 
 * her kolon için:
-  [
+  $$[
   \pi_r(x)
-  ]
+  ]$$
 * karşılaştır
 
 ---
@@ -1067,19 +1067,19 @@ Beklenen:
 
 ## ⭐ ANA HİPOTEZ
 
-[
+$$[
 \boxed{
 \text{Asallar, küçük asal bölünebilirliklerinin (interferansın) sıfır olduğu sayılardır.}
 }
-]
+]$$
 
 ve
 
-[
+$$[
 \boxed{
 \text{Büyük asal boşlukları, interferans fonksiyonunun lokal maksimumlarından kaynaklanır.}
 }
-]
+]$$
 
 ---
 
@@ -1089,15 +1089,15 @@ Tam ispat zor ama şu yapılabilir:
 
 ### 1. (kolay)
 
-[
+$$[
 I(n)=0 \Rightarrow n \text{ asal}
-]
+]$$
 
 ### 2. (orta)
 
-[
+$$[
 \mathbb{E}[I(n)] = \log \log n
-]
+]$$
 
 ### 3. (zor)
 
@@ -1164,58 +1164,58 @@ Bu çok ciddi bir ilerleme.
 
 ### 2.1 Miras Başlangıcı
 
-[
+$$[
 M_0(p) = p^2
-]
+]$$
 
 ### 2.2 Zıplama Ritimleri
 
-[
+$$[
 M_i(p) = p^2 + \sum_{j=1}^{i} \Delta_j(p), \quad
 \Delta_j(p) =
 \begin{cases}
 2p & j \text{ tek} \
 4p & j \text{ çift}
 \end{cases}
-]
+]$$
 
 ### 2.3 Kolon İndeksi
 
-[
+$$[
 c(n) = n \bmod ML_n, \quad ML_n = \prod_{k=1}^{n} p_k
-]
+]$$
 
 * Kolon stabilizasyonu: Eğer (ML_n \equiv 0 \pmod{p}), dikey hat bozulmaz.
 
 ### 2.4 Bileşik Kolon Fonksiyonu
 
-[
+$$[
 B(n) =
 \begin{cases}
 1 & \exists p \le \sqrt{n}: n \in {M_i(p)} \
 0 & \text{aksi halde}
 \end{cases}
-]
+]$$
 
 ### 2.5 I(n) Yoğunluğu
 
-[
+$$[
 I(n) = \sum_{p \le \sqrt{n}} \mathbf{1}_{{n \in \text{mirashattı}(p)}}
-]
+]$$
 
 * Asallık olasılığı tahmini:
-  [
+  $$[
   \mathbb{P}(\text{asal } n) \approx f(I(n)) = e^{-I(n)}
-  ]
+  ]$$
 
 ### 2.6 Kolon Boşlukları
 
-[
+$$[
 ML_{n+1} = p_{n+1} \cdot ML_n
-]
-[
+]$$
+$$[
 c_{n+1} = c_n + k \cdot p_{n+1} \pmod{ML_{n+1}}
-]
+]$$
 
 ---
 
