@@ -167,7 +167,18 @@ Bir $n$ sayısının asallığını bu formülle kontrol etmek için şu adımla
 * **Sonuç:** $91$ bileşik bir sayıdır ($7 \times 13$).
 
 ---
-
+```
+def is_hit(n, p):
+    # p'nin konumuna göre Ritim Sabiti (R)
+    r = 2*p if p % 6 == 5 else 4*p
+    
+    # Mesafe ve Periyot Kontrolü
+    d = n - p**2
+    if d < 0: return False
+    
+    # 6p periyodundaki vuruş noktaları: 0 veya R
+    return (d % (6*p)) in [0, r]
+```
 ### **Neden Bu Formül "Büyük Matris" İhtiyacını Bitirir?**
 Çünkü $(n - p^2) \pmod{6p}$ işlemi, sayının büyüklüğünden bağımsız olarak onu $6p$ uzunluğundaki tek bir **"ritim hücresine"** hapseder. Sen matrisin trilyonuncu satırına da baksan, o satırın o hücre içindeki pozisyonu her zaman bu modüler sonuçla aynıdır. 
 
@@ -229,7 +240,7 @@ Sayı ne kadar büyürse büyüsün, küçük asalların dikey hatları o devasa
 
 Her doğal sayı **n** için (veya sadece asallar için) koordinatlar şöyle tanımlanır:
 
-\[
+$$\[
 \begin{align}
 \theta(n) &= n \cdot k && \text{(açısal adım, radyan cinsinden)} \\[4pt]
 R(n) &= n \cdot g && \text{(yarıçap – koni genişlemesi)} \\[4pt]
@@ -238,14 +249,14 @@ x(n) &= R(n) \cdot \cos(\theta(n)) \\[4pt]
 y(n) &= R(n) \cdot \sin(\theta(n)) \\[4pt]
 z(n) &= Z(n)
 \end{align}
-\]
+\]$$
 
-- **\(k\)**: Açısal yoğunluk katsayısı (örnek: \(k = 0.1\) veya \(k = \frac{2\pi}{ML}\) ile matrise bağlı).  
+- **\(k\)**: Açısal yoğunluk katsayısı (örnek: $$\(k = 0.1\)$$ veya $$\(k = \frac{2\pi}{ML}\)$$ ile matrise bağlı).  
 - **\(g\)**: Genişleme katsayısı (koninin açısını belirler, örneğin \(g = 0.05\)).  
-- **\(h\)**: Yükselme (veya alçalma) katsayısı (örneğin \(h = 0.03\)).  
-- **\(Z_0\)**: Başlangıç yüksekliği (koninin tepe noktasını ayarlar, örneğin \(Z_0 = 10\)).  
+- **\(h\)**: Yükselme (veya alçalma) katsayısı (örneğin $$\(h = 0.03\)$$ ).  
+- **\(Z_0\)**: Başlangıç yüksekliği (koninin tepe noktasını ayarlar, örneğin $$\(Z_0 = 10\)$$ ).  
 
-**Ters koni etkisi** tam olarak **\(Z(n) = Z_0 - n \cdot h\)** satırından gelir.  
+**Ters koni etkisi** tam olarak ** $$\(Z(n) = Z_0 - n \cdot h\)$$ ** satırından gelir.  
 n büyüdükçe Z **azalırken** R büyür → koni **yukarıdan aşağıya** daralır (senin görselindeki gibi).
 
 ### 2. Matris + Dikey Lazer Hatları Entegrasyonu (En Önemli Kısım)
@@ -254,9 +265,9 @@ Sadece düzgün spiral değil, **matristeki dikey kolonlar** (senin beyaz lazer 
 
 Her sayı \(X\) için:
 
-\[
+$$[
 \theta(X) = 2\pi \times \frac{c}{ML_k}
-\]
+\]$$
 
 burada  
 - \(c = X \mod ML_k\) (matristeki sütun / kolon)  
@@ -264,7 +275,7 @@ burada
 
 Sonra koordinatlar:
 
-\[
+$$\[
 \begin{align}
 R(X) &= X \cdot g \\
 Z(X) &= Z_0 - X \cdot h \\
@@ -272,7 +283,7 @@ x(X) &= R(X) \cdot \cos\bigl(\theta(X)\bigr) \\
 y(X) &= R(X) \cdot \sin\bigl(\theta(X)\bigr) \\
 z(X) &= Z(X)
 \end{align}
-\]
+\]$$
 
 Bu sayede:
 - Aynı sütundaki tüm sayılar (**Mod 0** kuralına uyanlar) **aynı θ** değerinde kalır → **dikey lazer hattı** 3D’de radyal ışın olur.
