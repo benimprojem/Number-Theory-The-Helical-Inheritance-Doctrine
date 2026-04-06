@@ -103,4 +103,4 @@ No matter how large a number grows, the vertical lines of small primes pass thro
 
 **This study is a radical and consistent approach that rejects the irregularity in the distribution of primes and imprisons them within the vertical columns of a multi-dimensional matrix.**
 
-**"Complexity is actually a perfect weave; we are merely following the gaps (primes) within that weave."**
+## "Note: The Turkish version (README-tr.md) contains deeper insights and additional sections not yet fully translated into English."
